@@ -1,0 +1,368 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: relative;
+  padding: 24px;
+  margin: 0 auto 0 auto;
+  background-color: black;
+  color: white;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  line-height: 1;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.logo h1 span {
+  color: red;
+}
+
+.menu {
+  /* border: 2px solid white; */
+  display: none;
+  margin-right: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-left: 12px;
+}
+
+.menu a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.navBtn {
+  padding: 5px 8px 5px 8px;
+  background-color: red;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Hamburger Menu  */
+
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  transition: all 0.25s;
+  position: relative;
+  background-color: black;
+  display: block;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.menumobile {
+  position: absolute;
+  border-radius: 12px;
+  top: 100px;
+  padding: 1rem 0 1rem 0;
+  margin: auto;
+  font-weight: bold;
+  background-color: black;
+  left: 24px;
+  right: 24px;
+}
+
+.menumobile a {
+  text-decoration: none;
+  color: white;
+  margin: 2px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menumobile a:hover {
+  color: red;
+}
+
+.hero {
+  background-image: url("./img/hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+}
+
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 2rem 0 2rem;
+  min-height: 10rem;
+}
+
+.text p {
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
+}
+
+.text span {
+  margin-top: 20px;
+  color: gainsboro;
+  font-size: 1rem;
+}
+
+.heroBtn {
+  border: 2px solid red;
+  margin-top: 8px;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.features {
+  background-color: rgba(18, 18, 18, 1);
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 25%;
+  width: 350px;
+}
+
+.heading {
+  padding: 0.6rem;
+  text-align: justify;
+}
+
+.heading h2 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.heading h2 span {
+  color: red;
+}
+
+.subheading {
+  color: darkgray;
+}
+
+.cards {
+  margin: 1rem;
+}
+
+.card {
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.cardItems {
+  /* border: 2px solid gray; */
+}
+
+.cardItems span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cardItems h5 {
+  color: red;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+.cardItems p {
+  font-weight: lighter;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.testimonials {
+  background-color: rgba(18, 18, 18, 1);
+  color: white;
+}
+
+.testHeader {
+  text-align: center;
+  margin-top: 10px;
+  margin: 0 auto;
+}
+
+.testHeader h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.testContainer {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0.5rem 0 0.5rem;
+  background-color: rgb(47, 46, 46);
+  border-radius: 20px;
+  margin: 1rem 1rem;
+  padding: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+  .hero {
+    background-position: right center;
+  }
+
+  .menumobile {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .hero .text {
+    max-width: 100vw;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .cards {
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+  }
+
+  .cardItems span {
+    font-size: 3rem;
+  }
+
+  .cardItems h5 {
+    font-size: 1.5rem;
+  }
+
+  .cardItems p {
+    font-size: 20px;
+  }
+
+  .testHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.pricing {
+  background-color: rgba(18, 18, 18, 1);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.pricing ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.pricing li {
+  flex: 0 0 300px;
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: left;
+}
+
+.pricing h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing p {
+  margin-bottom: 0.5rem;
+}
+
+
